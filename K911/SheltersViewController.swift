@@ -21,10 +21,10 @@ class SheltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        findShelters(url: SHELTER_URL, zip: zipCode ?? "")
+        findShelters(url: SHELTER_URL, zip: zipCode!)
     }
 
-    // MARK: - Table view data source
+    // MARK: - TableView data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -47,6 +47,7 @@ class SheltersViewController: UITableViewController {
     */
 
     // MARK: - Alamofire Networking
+    
     fileprivate func findShelters(url: String, zip: String) {
         let params: [String : Any] = ["key" : API_KEY, "location" : zip, "format" : "json", "offset" : 0]
         
@@ -54,11 +55,20 @@ class SheltersViewController: UITableViewController {
             response in
             if response.result.isSuccess {
                 print("Success \(response.result.value ?? "")")
+                
+                let sheltersJSON: JSON = JSON(response.result.value!)
+                self.updateSheltersData(json: sheltersJSON)
             }
             else {
                 print("Error \(String(describing: response.result.error))")
             }
         }
+    }
+    
+    // MARK: - JSON Parsing
+    
+    fileprivate func updateSheltersData(json: JSON) {
+        
     }
 
 }
