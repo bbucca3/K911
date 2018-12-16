@@ -10,11 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - Properties
+    
     @IBOutlet weak var zipCodeTextField: UITextField!
+    
+    // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func searchButtonTapped(_ sender: Any) {
@@ -23,9 +26,10 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "showShelters", sender: self)
     }
     
+    // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showShelters" {
-            print("showing shelters")
             let sheltersVC = segue.destination as! SheltersViewController
             sheltersVC.zipCode = zipCodeTextField.text!
         }

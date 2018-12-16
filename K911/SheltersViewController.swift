@@ -17,6 +17,7 @@ class SheltersViewController: UITableViewController {
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
     let API_KEY = Petfinder().token
     var zipCode: String?
+    var shelters: [Shelter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class SheltersViewController: UITableViewController {
         findShelters(url: SHELTER_URL, zip: zipCode!)
     }
 
-    // MARK: - TableView data source
+    // MARK: - TableView Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -54,10 +55,10 @@ class SheltersViewController: UITableViewController {
         Alamofire.request(url, method: .get, parameters: params).responseJSON {
             response in
             if response.result.isSuccess {
-                print("Success \(response.result.value ?? "")")
-                
-                let sheltersJSON: JSON = JSON(response.result.value!)
-                self.updateSheltersData(json: sheltersJSON)
+                if let value = response.result.value {
+                    let sheltersJSON: JSON = JSON(value)
+                    self.updateSheltersData(json: sheltersJSON)
+                }
             }
             else {
                 print("Error \(String(describing: response.result.error))")
@@ -68,7 +69,7 @@ class SheltersViewController: UITableViewController {
     // MARK: - JSON Parsing
     
     fileprivate func updateSheltersData(json: JSON) {
-        
+        print("JSON is \(json.dictionaryValue)")
     }
 
 }
