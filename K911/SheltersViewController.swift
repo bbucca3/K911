@@ -7,21 +7,21 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SheltersViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
+    let API_KEY = Petfinder().token
     var zipCode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        print("zipCode is \(zipCode ?? "blank")")
+        findShelters(url: SHELTER_URL, zip: zipCode ?? "")
     }
 
     // MARK: - Table view data source
@@ -81,14 +81,19 @@ class SheltersViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Alamofire Networking
+    fileprivate func findShelters(url: String, zip: String) {
+        let params: [String:Any] = ["key" : API_KEY, "location" : zip, "format" : "json", "offset" : 0]
+        
+        Alamofire.request(url, method: .get, parameters: params).responseJSON {
+            response in
+            if response.result.isSuccess {
+                print("Success \(response.result.value ?? "")")
+            }
+            else {
+                print("Error \(String(describing: response.result.error))")
+            }
+        }
     }
-    */
 
 }
