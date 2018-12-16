@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class Example {
+    // API token
+    let token = ""
+}
