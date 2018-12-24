@@ -17,11 +17,10 @@ class SheltersViewController: UITableViewController {
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
     let API_KEY = Petfinder().token
     var zipCode: String?
-    var shelters: [Shelter] = []
+    var allShelters: [Shelter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         findShelters(url: SHELTER_URL, zip: zipCode!)
     }
 
@@ -29,12 +28,12 @@ class SheltersViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return allShelters.count
     }
 
     /*
@@ -47,7 +46,7 @@ class SheltersViewController: UITableViewController {
     }
     */
 
-    // MARK: - Alamofire Networking
+    // MARK: - Networking Functions
     
     fileprivate func findShelters(url: String, zip: String) {
         let params: [String : Any] = ["key" : API_KEY, "location" : zip, "format" : "json", "offset" : 0]
@@ -69,7 +68,16 @@ class SheltersViewController: UITableViewController {
     // MARK: - JSON Parsing
     
     fileprivate func updateSheltersData(json: JSON) {
-        print("JSON is \(json.dictionaryValue)")
+        
+        if let shelters = json.dictionaryValue["petfinder"]?["shelters"]["shelter"] {
+            
+            for (_, shelter) in shelters {
+                let currentShelter = Shelter(json: shelter)
+                self.allShelters.append(currentShelter)
+            }
+        }
+        
+        print(allShelters)
     }
 
 }
