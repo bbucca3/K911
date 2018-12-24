@@ -14,11 +14,10 @@
 
 ## Usage
 
-> Search for pets/animal shelters via any 5 digit US zip code. Search results are from Petfinder.com API.
-
-> In order to use, visit Petfinder.com and register for a personal API key.
-
-> Create Petfinder.swift under the API folder and paste in your API key (see Example.swift format).
+- Search for pets/animal shelters via any 5 digit US zip code.
+- Search results are from Petfinder.com API.
+- In order to use, visit Petfinder.com and register for a personal API key.
+- Create Petfinder.swift under the API folder and paste in your API key (see Example.swift format).
 
 ## Development
 
