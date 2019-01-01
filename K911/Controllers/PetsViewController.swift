@@ -7,55 +7,85 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PetsViewController: UITableViewController {
 
     // MARK: - Properties
     
+    let PETS_URL: String = "http://api.petfinder.com/shelter.getPets"
+    let API_KEY: String = Petfinder().token
+    var allPetsArray = [Pet]()
     var shelterId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         print("shelterId is \(shelterId ?? "")")
+        if let shelterId = shelterId {
+            findPets(url: PETS_URL, id: shelterId)
+        }
     }
 
-    // MARK: - Table view data source
+    // MARK: - TableView DataSource Methods
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return allPetsArray.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath)
 
-        // Configure the cell...
+        let item = allPetsArray[indexPath.row]
+        
+        cell.textLabel?.text = item.name
 
         return cell
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Networking Functions
+    
+    fileprivate func findPets(url: String, id: String) {
+        
+        let params: [String : Any] = ["key" : API_KEY, "id" : id, "format" : "json", "count" : 50]
+        
+        Alamofire.request(url, method: .get, parameters: params).responseJSON {
+            response in
+            if response.result.isSuccess {
+                if let value = response.result.value {
+                    let petsJSON: JSON = JSON(value)
+                    self.updatePetsData(json: petsJSON)
+                }
+            } else {
+                print("findPets Error \(String(describing: response.result.error))")
+            }
+        }
     }
-    */
+    
+    // MARK: - JSON Parsing
+    
+    fileprivate func updatePetsData(json: JSON) {
+        
+        if let pets = json.dictionaryValue["petfinder"]?["pets"]["pet"] {
+            print("pets: ", pets.type)
+            if pets.type == .dictionary {
+                let singlePet = Pet(json: pets)
+                self.allPetsArray.append(singlePet)
+            } else {
+                for (_, pet) in pets {
+                    let currentPet = Pet(json: pet)
+                    self.allPetsArray.append(currentPet)
+                }
+            }
+        }
+        
+        tableView.reloadData()
+    }
 
 }
