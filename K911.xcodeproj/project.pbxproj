@@ -53,7 +53,6 @@
 		1787056B21C48C0A00600D63 = {
 			isa = PBXGroup;
 			children = (
-				17AB092021C5E12B0076659B /* API */,
 				1787057621C48C0A00600D63 /* K911 */,
 				1787057521C48C0A00600D63 /* Products */,
 				D34F3DBFC987D3E2B2B6D3C4 /* Pods */,
@@ -72,14 +71,12 @@
 		1787057621C48C0A00600D63 /* K911 */ = {
 			isa = PBXGroup;
 			children = (
-				17E0692C21C6E82400D79B33 /* Objects */,
 				1787057721C48C0A00600D63 /* AppDelegate.swift */,
-				1787057921C48C0A00600D63 /* HomeViewController.swift */,
-				17AB091921C56DF60076659B /* SheltersViewController.swift */,
-				1787057B21C48C0A00600D63 /* SecondViewController.swift */,
-				1787057D21C48C0A00600D63 /* Main.storyboard */,
-				1787058021C48C0B00600D63 /* Assets.xcassets */,
-				1787058221C48C0B00600D63 /* LaunchScreen.storyboard */,
+				17AB092021C5E12B0076659B /* API */,
+				17E0692C21C6E82400D79B33 /* Models */,
+				17E0693521DB0A7600D79B33 /* Controllers */,
+				17E0693621DB0AAB00D79B33 /* Views */,
+				17E0693721DB0B6200D79B33 /* Supporting Files */,
 				1787058521C48C0B00600D63 /* Info.plist */,
 			);
 			path = K911;
@@ -94,12 +91,39 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		17E0692C21C6E82400D79B33 /* Objects */ = {
+		17E0692C21C6E82400D79B33 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				17E0692D21C6E84C00D79B33 /* Shelter.swift */,
 			);
-			path = Objects;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17E0693521DB0A7600D79B33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1787057921C48C0A00600D63 /* HomeViewController.swift */,
+				17AB091921C56DF60076659B /* SheltersViewController.swift */,
+				1787057B21C48C0A00600D63 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		17E0693621DB0AAB00D79B33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1787058221C48C0B00600D63 /* LaunchScreen.storyboard */,
+				1787057D21C48C0A00600D63 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17E0693721DB0B6200D79B33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1787058021C48C0B00600D63 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4B8D29E8AC9963B905954CA7 /* Frameworks */ = {
