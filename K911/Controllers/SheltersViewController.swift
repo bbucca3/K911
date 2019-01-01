@@ -17,7 +17,7 @@ class SheltersViewController: UITableViewController {
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
     let API_KEY = Petfinder().token
     var zipCode: String?
-    var allShelters: [Shelter] = []
+    var allSheltersArray = [Shelter]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +33,18 @@ class SheltersViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allShelters.count
+        return allSheltersArray.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shelterCell", for: indexPath)
 
-        // Configure the cell...
+        let item = allSheltersArray[indexPath.row]
+        
+        cell.textLabel?.text = item.name
 
         return cell
     }
-    */
 
     // MARK: - Networking Functions
     
@@ -73,11 +73,12 @@ class SheltersViewController: UITableViewController {
             
             for (_, shelter) in shelters {
                 let currentShelter = Shelter(json: shelter)
-                self.allShelters.append(currentShelter)
+                self.allSheltersArray.append(currentShelter)
             }
         }
         
-        print(allShelters)
+        print(allSheltersArray)
+        tableView.reloadData()
     }
 
 }
