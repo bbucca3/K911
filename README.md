@@ -14,10 +14,7 @@
 
 ## Usage
 
-- Search for pets/animal shelters via any 5 digit US zip code.
-- Search results are from Petfinder.com API.
-- In order to use, visit Petfinder.com and register for a personal API key.
-- Create Petfinder.swift under the API folder and paste in your API key (see Example.swift format).
+- Search for pets/animal shelters via any 5 digit US zip code (Search results are from [Petfinder.com API](https://www.petfinder.com/developers/api-docs)).
 
 ## Development
 
@@ -26,6 +23,11 @@ From within the root directory:
 ```sh
 pod install
 ```
+
+In order to use search functionality:
+
+- Visit Petfinder.com and register for a (free) personal API key.
+- Create a new Swift file called Petfinder.swift under the API folder and paste in your API key (see Example.swift for format).
 
 ## Concept Screens
 
