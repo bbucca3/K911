@@ -1,6 +1,6 @@
 # K911
 
-> Petfinder Shelters and Pets Search
+> Petfinder Pets (and Pet Shelters) Search
 
 ## Team
 
@@ -10,11 +10,11 @@
 
 1. [Usage](#Usage)
 1. [Development](#Development)
-1. [Screenshots](#Screenshots)
+1. [Screenshots](#Concept_Screenshots)
 
 ## Usage
 
-- Search for pets/animal shelters via any 5 digit US zip code (search results are from [Petfinder.com API](https://www.petfinder.com/developers/api-docs)).
+- Search for pets and pet shelters via any 5 digit US zip code (search results are from [Petfinder.com API](https://www.petfinder.com/developers/api-docs)).
 
 ## Development
 
