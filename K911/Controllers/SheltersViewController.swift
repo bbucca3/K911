@@ -21,10 +21,17 @@ class SheltersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        findShelters(url: SHELTER_URL, zip: zipCode!)
+        
+        if let fiveDigitZipCode = zipCode {
+            if fiveDigitZipCode.count != 5 {
+                print("Did not enter 5 digit zip")
+            } else {
+                findShelters(url: SHELTER_URL, zip: fiveDigitZipCode)
+            }
+        }
     }
 
-    // MARK: - TableView Data Source
+    // MARK: - TableView DataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -35,13 +42,19 @@ class SheltersViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shelterCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath)
 
         let item = allSheltersArray[indexPath.row]
         
         cell.textLabel?.text = item.name
 
         return cell
+    }
+    
+    // MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // MARK: - Networking Functions
