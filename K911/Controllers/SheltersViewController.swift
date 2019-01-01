@@ -46,9 +46,9 @@ class SheltersViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath)
 
-        let item = allSheltersArray[indexPath.row]
+        let shelter = allSheltersArray[indexPath.row]
         
-        cell.textLabel?.text = item.name
+        cell.textLabel?.text = shelter.name
 
         return cell
     }

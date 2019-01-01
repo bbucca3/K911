@@ -42,9 +42,9 @@ class PetsViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath)
 
-        let item = allPetsArray[indexPath.row]
+        let pet = allPetsArray[indexPath.row]
         
-        cell.textLabel?.text = item.name
+        cell.textLabel?.text = pet.name
 
         return cell
     }
@@ -98,6 +98,7 @@ class PetsViewController: UITableViewController {
             } else {
                 
                 for (_, pet) in pets {
+                    
                     var currentPet = Pet(json: pet)
                     
                     if let photos = pet.dictionaryValue["media"]?["photos"]["photo"] {
