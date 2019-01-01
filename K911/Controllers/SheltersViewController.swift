@@ -16,9 +16,9 @@ class SheltersViewController: UITableViewController {
     
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
     let API_KEY: String = Petfinder().token
-    var zipCode: String?
-    var selectedShelterId: String?
     var allSheltersArray = [Shelter]()
+    var selectedShelterId: String?
+    var zipCode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +98,7 @@ class SheltersViewController: UITableViewController {
                 }
             }
             else {
-                print("Error \(String(describing: response.result.error))")
+                print("Alamofire Error \(String(describing: response.result.error))")
             }
         }
     }
@@ -115,7 +115,6 @@ class SheltersViewController: UITableViewController {
             }
         }
         
-        print(allSheltersArray)
         tableView.reloadData()
     }
     
