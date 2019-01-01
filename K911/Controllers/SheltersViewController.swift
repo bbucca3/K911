@@ -15,8 +15,9 @@ class SheltersViewController: UITableViewController {
     // MARK: - Properties
     
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
-    let API_KEY = Petfinder().token
+    let API_KEY: String = Petfinder().token
     var zipCode: String?
+    var selectedShelterId: String?
     var allSheltersArray = [Shelter]()
 
     override func viewDidLoad() {
@@ -29,6 +30,9 @@ class SheltersViewController: UITableViewController {
                 findShelters(url: SHELTER_URL, zip: fiveDigitZipCode)
             }
         }
+        
+//         self.clearsSelectionOnViewWillAppear = false
+
     }
 
     // MARK: - TableView DataSource Methods
@@ -42,6 +46,7 @@ class SheltersViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath)
 
         let item = allSheltersArray[indexPath.row]
@@ -70,12 +75,18 @@ class SheltersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let shelter = allSheltersArray[indexPath.row]
+        selectedShelterId = shelter.id
+        performSegue(withIdentifier: "showPets", sender: self)
     }
 
     // MARK: - Networking Functions
     
     fileprivate func findShelters(url: String, zip: String) {
+        
         let params: [String : Any] = ["key" : API_KEY, "location" : zip, "format" : "json", "offset" : 0]
         
         Alamofire.request(url, method: .get, parameters: params).responseJSON {
@@ -106,6 +117,18 @@ class SheltersViewController: UITableViewController {
         
         print(allSheltersArray)
         tableView.reloadData()
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showPets" {
+            let petsVC = segue.destination as! PetsViewController
+            if let shelterId = selectedShelterId {
+                petsVC.shelterId = shelterId
+            }
+        }
     }
 
 }

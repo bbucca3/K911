@@ -17,6 +17,7 @@
 		17AB092221C5E1470076659B /* Petfinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AB092121C5E1470076659B /* Petfinder.swift */; };
 		17AB092421C5E33E0076659B /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AB092321C5E33E0076659B /* Example.swift */; };
 		17E0692E21C6E84C00D79B33 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0692D21C6E84C00D79B33 /* Shelter.swift */; };
+		17E0696021DB378A00D79B33 /* PetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0695F21DB378A00D79B33 /* PetsViewController.swift */; };
 		E2A18DF305BD532583911658 /* Pods_K911.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686BF46773088F49DFD0A8D /* Pods_K911.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		17AB092121C5E1470076659B /* Petfinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petfinder.swift; sourceTree = "<group>"; };
 		17AB092321C5E33E0076659B /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		17E0692D21C6E84C00D79B33 /* Shelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelter.swift; sourceTree = "<group>"; };
+		17E0695F21DB378A00D79B33 /* PetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewController.swift; sourceTree = "<group>"; };
 		4686BF46773088F49DFD0A8D /* Pods_K911.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K911.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D48CB6A1134B44FA69EB63C /* Pods-K911.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K911.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K911/Pods-K911.debug.xcconfig"; sourceTree = "<group>"; };
 		7AFF9593AC86EBA73074587F /* Pods-K911.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K911.release.xcconfig"; path = "Pods/Target Support Files/Pods-K911/Pods-K911.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				1787057921C48C0A00600D63 /* SearchViewController.swift */,
 				17AB091921C56DF60076659B /* SheltersViewController.swift */,
+				17E0695F21DB378A00D79B33 /* PetsViewController.swift */,
 				1787057B21C48C0A00600D63 /* SecondViewController.swift */,
 			);
 			path = Controllers;
@@ -271,6 +274,7 @@
 				17AB092421C5E33E0076659B /* Example.swift in Sources */,
 				17AB092221C5E1470076659B /* Petfinder.swift in Sources */,
 				1787057821C48C0A00600D63 /* AppDelegate.swift in Sources */,
+				17E0696021DB378A00D79B33 /* PetsViewController.swift in Sources */,
 				1787057A21C48C0A00600D63 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
