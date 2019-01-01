@@ -10,14 +10,14 @@ import Foundation
 import SwiftyJSON
 
 struct Shelter {
-    let name: String?
-    let id: String?
-    let email: String?
-    let phone: String?
-    let city: String?
-    let country: String?
-    let state: String?
-    let address: String?
+    let name: String
+    let id: String
+    let email: String
+    let phone: String
+    let city: String
+    let country: String
+    let state: String
+    let address: String
     
     init(json: JSON) {
         self.name = json["name"]["$t"].stringValue
