@@ -31,7 +31,7 @@ class SheltersViewController: UITableViewController {
         }
     }
 
-    // MARK: - TableView DataSource
+    // MARK: - TableView DataSource Methods
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -51,7 +51,23 @@ class SheltersViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - TableView Delegate
+    // MARK: - TableView Delegate Methods
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let view = UIView()
+        let label = UILabel()
+        
+        if let zip = zipCode {
+            label.text = "Searched for \(zip)"
+//            view.addSubview(label)
+        }
+        
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44.0
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
