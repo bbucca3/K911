@@ -14,7 +14,7 @@
 
 ## Usage
 
-- Search for pets/animal shelters via any 5 digit US zip code (Search results are from [Petfinder.com API](https://www.petfinder.com/developers/api-docs)).
+- Search for pets/animal shelters via any 5 digit US zip code (search results are from [Petfinder.com API](https://www.petfinder.com/developers/api-docs)).
 
 ## Development
 
