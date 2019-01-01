@@ -27,6 +27,6 @@ From within the root directory:
 pod install
 ```
 
-## Screenshots
+## Concept Screens
 
 <img src="https://github.com/bbucca3/Canine11/blob/master/screenshots/HomeScreen1.png" width="150" height="300" alt="Home Screen"><img src="https://github.com/bbucca3/Canine11/blob/master/screenshots/SheltersScreen1.png" width="150" height="300" alt="Shelters Search Results Screen"><img src="https://github.com/bbucca3/Canine11/blob/master/screenshots/PetsScreen1.png" width="150" height="300" alt="Pets Screen"><img src="https://github.com/bbucca3/Canine11/blob/master/screenshots/PetDetailScreen1.png" width="150" height="300" alt="Pet Details Screen">
