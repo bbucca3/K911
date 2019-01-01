@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  SearchViewController.swift
 //  K911
 //
 //  Created by Benjamin Bucca on 12/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     // MARK: - Properties
     
