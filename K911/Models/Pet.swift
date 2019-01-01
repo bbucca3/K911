@@ -15,7 +15,7 @@ struct Pet {
     let sex: String
     let animal: String
     let size: String
-    let photos: Array<Any>
+    var photos: Array<Photo>
     
     init(json: JSON) {
         self.name = json["name"]["$t"].stringValue
@@ -23,6 +23,6 @@ struct Pet {
         self.sex = json["sex"]["$t"].stringValue
         self.animal = json["animal"]["$t"].stringValue
         self.size = json["size"]["$t"].stringValue
-        self.photos = json["media"]["photos"]["photo"].arrayValue
+        self.photos = [Photo]()
     }
 }

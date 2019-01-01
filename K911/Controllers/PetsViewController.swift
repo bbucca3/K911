@@ -49,6 +49,13 @@ class PetsViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - TableView Delegate Methods
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: - Networking Functions
     
     fileprivate func findPets(url: String, id: String) {
@@ -73,13 +80,34 @@ class PetsViewController: UITableViewController {
     fileprivate func updatePetsData(json: JSON) {
         
         if let pets = json.dictionaryValue["petfinder"]?["pets"]["pet"] {
-            print("pets: ", pets.type)
+//            print("pets: ", pets.type)
             if pets.type == .dictionary {
-                let singlePet = Pet(json: pets)
+                
+                var singlePet = Pet(json: pets)
+                
+                if let photos = pets.dictionaryValue["media"]?["photos"]["photo"] {
+                    for (_, photo) in photos {
+                        let petPhoto = Photo(json: photo)
+                        print(petPhoto)
+                        singlePet.photos.append(petPhoto)
+                    }
+                }
+                
                 self.allPetsArray.append(singlePet)
+                
             } else {
+                
                 for (_, pet) in pets {
-                    let currentPet = Pet(json: pet)
+                    var currentPet = Pet(json: pet)
+                    
+                    if let photos = pet.dictionaryValue["media"]?["photos"]["photo"] {
+                        for (_, photo) in photos {
+                            let petPhoto = Photo(json: photo)
+                            print(petPhoto)
+                            currentPet.photos.append(petPhoto)
+                        }
+                    }
+                    
                     self.allPetsArray.append(currentPet)
                 }
             }

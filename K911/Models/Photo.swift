@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+struct Photo {
+    let id: String
+    let size: String
+    let url: String
+    
+    init(json: JSON) {
+        self.id = json["@id"].stringValue
+        self.size = json["@size"].stringValue
+        self.url = json["$t"].stringValue
+    }
+}
