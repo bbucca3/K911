@@ -30,9 +30,6 @@ class SheltersViewController: UITableViewController {
                 findShelters(url: SHELTER_URL, zip: fiveDigitZipCode)
             }
         }
-        
-//         self.clearsSelectionOnViewWillAppear = false
-
     }
 
     // MARK: - TableView DataSource Methods
@@ -98,7 +95,7 @@ class SheltersViewController: UITableViewController {
                 }
             }
             else {
-                print("Alamofire Error \(String(describing: response.result.error))")
+                print("findShelters Error \(String(describing: response.result.error))")
             }
         }
     }
