@@ -56,12 +56,10 @@ class SheltersViewController: UITableViewController {
     // MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView()
         let label = UILabel()
         
         if let zip = zipCode {
             label.text = "Searched for \(zip)"
-//            view.addSubview(label)
         }
         
         return label
