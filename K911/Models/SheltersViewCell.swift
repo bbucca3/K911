@@ -10,6 +10,19 @@ import UIKit
 
 class SheltersViewCell: UITableViewCell {
 
+    @IBOutlet weak var shelterName: UILabel!
+    @IBOutlet weak var shelterCity: UILabel!
     
-
+    var name: String? {
+        didSet{
+            self.shelterName.text = name
+        }
+    }
+    
+    var city: String? {
+        didSet{
+            self.shelterCity.text = city
+        }
+    }
+    
 }

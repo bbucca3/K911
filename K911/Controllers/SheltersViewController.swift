@@ -44,11 +44,14 @@ class SheltersViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath) as! SheltersViewCell
 
         let shelter = allSheltersArray[indexPath.row]
         
-        cell.textLabel?.text = shelter.name
+        cell.name = shelter.name
+        cell.city = shelter.city
+        
+//        cell.textLabel?.text = shelter.name
 
         return cell
     }
