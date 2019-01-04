@@ -50,8 +50,6 @@ class SheltersViewController: UITableViewController {
         
         cell.name = shelter.name
         cell.city = shelter.city
-        
-//        cell.textLabel?.text = shelter.name
 
         return cell
     }
