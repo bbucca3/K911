@@ -91,7 +91,7 @@ class PetsViewController: UITableViewController {
     fileprivate func updatePetsData(json: JSON) {
         
         if let pets = json.dictionaryValue["petfinder"]?["pets"]["pet"] {
-//            print("pets: ", pets.type)
+            
             if pets.type == .dictionary {
                 
                 let singlePet = Pet(json: pets)
