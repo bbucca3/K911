@@ -94,38 +94,33 @@ class PetsViewController: UITableViewController {
 //            print("pets: ", pets.type)
             if pets.type == .dictionary {
                 
-                var singlePet = Pet(json: pets)
-                
-                if let photos = pets.dictionaryValue["media"]?["photos"]["photo"] {
-                    for (_, photo) in photos {
-                        let petPhoto = Photo(json: photo)
-                        print(petPhoto)
-                        singlePet.photos.append(petPhoto)
-                    }
-                }
-                
-                self.allPetsArray.append(singlePet)
-                
+                let singlePet = Pet(json: pets)
+                parsePhotosForPet(pet: singlePet, json: pets)
             } else {
                 
                 for (_, pet) in pets {
                     
-                    var currentPet = Pet(json: pet)
-                    
-                    if let photos = pet.dictionaryValue["media"]?["photos"]["photo"] {
-                        for (_, photo) in photos {
-                            let petPhoto = Photo(json: photo)
-                            print(petPhoto)
-                            currentPet.photos.append(petPhoto)
-                        }
-                    }
-                    
-                    self.allPetsArray.append(currentPet)
+                    let currentPet = Pet(json: pet)
+                    parsePhotosForPet(pet: currentPet, json: pet)
                 }
             }
         }
         
         tableView.reloadData()
+    }
+    
+    fileprivate func parsePhotosForPet(pet: Pet, json: JSON) {
+        
+        var singlePet = pet
+        
+        if let photos = json.dictionaryValue["media"]?["photos"]["photo"] {
+            for (_, photo) in photos {
+                let petPhoto = Photo(json: photo)
+                singlePet.photos.append(petPhoto)
+            }
+        }
+        
+        self.allPetsArray.append(singlePet)
     }
 
 }
