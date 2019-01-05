@@ -40,11 +40,23 @@ class PetsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath) as! PetsViewCell
 
         let pet = allPetsArray[indexPath.row]
         
-        cell.textLabel?.text = pet.name
+        if let url = URL(string: (pet.photos.first?.url ?? "")) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    cell.petImg = UIImage(data: data!)
+                }
+            }
+
+        }
+        
+        cell.petName.text = pet.name
+        cell.petAnimal.text = pet.animal
+        cell.petSex.text = pet.sex
 
         return cell
     }
