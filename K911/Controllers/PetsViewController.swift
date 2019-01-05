@@ -18,6 +18,7 @@ class PetsViewController: UITableViewController {
     let API_KEY: String = Petfinder().token
     var allPetsArray = [Pet]()
     var shelterId: String?
+    var selectedPet: Pet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,10 @@ class PetsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let pet = allPetsArray[indexPath.row]
+        selectedPet = pet
+        performSegue(withIdentifier: "petDetail", sender: self)
     }
     
     // MARK: - Networking Functions
@@ -123,6 +128,18 @@ class PetsViewController: UITableViewController {
         }
         
         self.allPetsArray.append(singlePet)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "petDetail" {
+            let petDetailVC = segue.destination as! PetDetailViewController
+            if let selectedPet = selectedPet {
+                petDetailVC.pet = selectedPet
+            }
+        }
     }
 
 }
