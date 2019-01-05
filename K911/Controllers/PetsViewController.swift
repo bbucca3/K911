@@ -53,9 +53,11 @@ class PetsViewController: UITableViewController {
 
         }
         
-        cell.petName.text = pet.name
-        cell.petAnimal.text = pet.animal
-        cell.petSex.text = pet.sex
+        let sexOfPet = pet.sex == "M" ? "Male" : "Female"
+        
+        cell.name = pet.name
+        cell.animal = sexOfPet + " " + pet.animal
+        cell.sex = pet.age
 
         return cell
     }
