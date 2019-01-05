@@ -22,7 +22,6 @@ class PetsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("shelterId is \(shelterId ?? "")")
         if let shelterId = shelterId {
             findPets(url: PETS_URL, id: shelterId)
         }
