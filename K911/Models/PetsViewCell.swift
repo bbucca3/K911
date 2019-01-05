@@ -1,4 +1,4 @@
-//
+ //
 //  PetsViewCell.swift
 //  K911
 //
@@ -10,15 +10,33 @@ import UIKit
 
 class PetsViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var petName: UILabel!
+    @IBOutlet weak var petAnimal: UILabel!
+    @IBOutlet weak var petSex: UILabel!
+    
+    var petImg: UIImage? {
+        didSet {
+            self.petImage.image = petImg
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    var name: String? {
+        didSet {
+            self.petName.text = name
+        }
+    }
+    
+    var animal: String? {
+        didSet {
+            self.petAnimal.text = animal
+        }
+    }
+    
+    var sex: String? {
+        didSet {
+            self.petSex.text = sex
+        }
     }
 
 }
