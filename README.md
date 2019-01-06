@@ -1,6 +1,6 @@
 # K911
 
-> Petfinder Pets (and Pet Shelters) Search
+> Petfinder.com Pets (and Pet Shelters) Search
 
 ## Team
 
