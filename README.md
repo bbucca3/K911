@@ -28,7 +28,7 @@ In order to use search functionality:
 
 - Register for a Petfinder.com (free) API key [here](https://www.petfinder.com/developers/api-key).
 - Create a new Swift file called `Petfinder.swift` under the API folder.
-- Paste in your API key to Petfinder.swift (see Example.swift under API folder for format).
+- Paste in your API key to `Petfinder.swift` (see `Example.swift` under API folder for format).
 
 ## Screenshots
 
