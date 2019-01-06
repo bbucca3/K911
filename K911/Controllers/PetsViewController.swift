@@ -16,6 +16,7 @@ class PetsViewController: UITableViewController {
     
     let PETS_URL: String = "http://api.petfinder.com/shelter.getPets"
     let API_KEY: String = Petfinder().token
+    let PET_DETAIL: String = "petDetail"
     var allPetsArray = [Pet]()
     var shelterId: String?
     var selectedPet: Pet?
@@ -71,7 +72,7 @@ class PetsViewController: UITableViewController {
         
         let pet = allPetsArray[indexPath.row]
         selectedPet = pet
-        performSegue(withIdentifier: "petDetail", sender: self)
+        performSegue(withIdentifier: PET_DETAIL, sender: self)
     }
     
     // MARK: - Networking Functions
@@ -136,7 +137,7 @@ class PetsViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "petDetail" {
+        if segue.identifier == PET_DETAIL {
             let petDetailVC = segue.destination as! PetDetailViewController
             if let selectedPet = selectedPet {
                 petDetailVC.pet = selectedPet
