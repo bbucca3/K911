@@ -14,8 +14,8 @@ class PetsViewController: UITableViewController {
 
     // MARK: - Properties
     
-    let PETS_URL: String = "http://api.petfinder.com/shelter.getPets"
     let API_KEY: String = Petfinder().token
+    let PETS_URL: String = "http://api.petfinder.com/shelter.getPets"
     let PET_DETAIL: String = "petDetail"
     var allPetsArray = [Pet]()
     var shelterId: String?
