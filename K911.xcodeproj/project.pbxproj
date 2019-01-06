@@ -20,9 +20,9 @@
 		17E0696221DBECF000D79B33 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696121DBECF000D79B33 /* Pet.swift */; };
 		17E0696421DC259600D79B33 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696321DC259600D79B33 /* Photo.swift */; };
 		17E0696621DD97C300D79B33 /* SheltersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696521DD97C300D79B33 /* SheltersViewCell.swift */; };
-		17E0696821DD980400D79B33 /* Petfinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696721DD980400D79B33 /* Petfinder.swift */; };
 		17E0696A21E04B6B00D79B33 /* PetsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696921E04B6B00D79B33 /* PetsViewCell.swift */; };
 		17E0696C21E1659F00D79B33 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */; };
+		17E0696E21E2617000D79B33 /* Petfinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696D21E2617000D79B33 /* Petfinder.swift */; };
 		E2A18DF305BD532583911658 /* Pods_K911.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686BF46773088F49DFD0A8D /* Pods_K911.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +42,9 @@
 		17E0696121DBECF000D79B33 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		17E0696321DC259600D79B33 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		17E0696521DD97C300D79B33 /* SheltersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersViewCell.swift; sourceTree = "<group>"; };
-		17E0696721DD980400D79B33 /* Petfinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Petfinder.swift; path = ../../../../.Trash/Petfinder.swift; sourceTree = "<group>"; };
 		17E0696921E04B6B00D79B33 /* PetsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewCell.swift; sourceTree = "<group>"; };
 		17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
+		17E0696D21E2617000D79B33 /* Petfinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petfinder.swift; sourceTree = "<group>"; };
 		4686BF46773088F49DFD0A8D /* Pods_K911.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K911.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D48CB6A1134B44FA69EB63C /* Pods-K911.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K911.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K911/Pods-K911.debug.xcconfig"; sourceTree = "<group>"; };
 		7AFF9593AC86EBA73074587F /* Pods-K911.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K911.release.xcconfig"; path = "Pods/Target Support Files/Pods-K911/Pods-K911.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		17AB092021C5E12B0076659B /* API */ = {
 			isa = PBXGroup;
 			children = (
-				17E0696721DD980400D79B33 /* Petfinder.swift */,
+				17E0696D21E2617000D79B33 /* Petfinder.swift */,
 				17AB092321C5E33E0076659B /* Example.swift */,
 			);
 			path = API;
@@ -295,7 +295,7 @@
 				17E0696021DB378A00D79B33 /* PetsViewController.swift in Sources */,
 				1787057A21C48C0A00600D63 /* SearchViewController.swift in Sources */,
 				17E0696C21E1659F00D79B33 /* PetDetailViewController.swift in Sources */,
-				17E0696821DD980400D79B33 /* Petfinder.swift in Sources */,
+				17E0696E21E2617000D79B33 /* Petfinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
