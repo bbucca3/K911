@@ -122,8 +122,10 @@ class PetsViewController: UITableViewController {
         
         if let photos = json.dictionaryValue["media"]?["photos"]["photo"] {
             for (_, photo) in photos {
-                let petPhoto = Photo(json: photo)
-                singlePet.photos.append(petPhoto)
+                if (photo["@size"] == "x") {
+                    let petPhoto = Photo(json: photo)
+                    singlePet.photos.append(petPhoto)
+                }
             }
         }
         
