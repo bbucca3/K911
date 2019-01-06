@@ -1,6 +1,6 @@
 # K911
 
-> Petfinder.com Pets (and Pet Shelters) Search
+> Petfinder.com Pets and Pet Shelter(s) Search
 
 ## Team
 
@@ -26,9 +26,9 @@ pod install
 
 In order to use search functionality:
 
-- Visit Petfinder.com and register for a (free) API key [here](https://www.petfinder.com/developers/api-key).
+- Register for a Petfinder.com (free) API key [here](https://www.petfinder.com/developers/api-key).
 - Create a new Swift file called Petfinder.swift under the API folder.
-- Paste in your API key to Petfinder.swift (see Example.swift for format).
+- Paste in your API key to Petfinder.swift (see Example.swift under API folder for format).
 
 ## Screenshots
 
