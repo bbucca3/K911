@@ -118,18 +118,18 @@ class PetsViewController: UITableViewController {
     
     fileprivate func parsePhotosForPet(pet: Pet, json: JSON) {
         
-        var singlePet = pet
+        var shelterPet = pet
         
         if let photos = json.dictionaryValue["media"]?["photos"]["photo"] {
             for (_, photo) in photos {
                 if (photo["@size"] == "x") {
                     let petPhoto = Photo(json: photo)
-                    singlePet.photos.append(petPhoto)
+                    shelterPet.photos.append(petPhoto)
                 }
             }
         }
         
-        self.allPetsArray.append(singlePet)
+        self.allPetsArray.append(shelterPet)
     }
     
     // MARK: - Navigation
