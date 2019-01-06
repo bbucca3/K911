@@ -54,11 +54,11 @@ class PetsViewController: UITableViewController {
 
         }
         
-        let sexOfPet = pet.sex == "M" ? "Male" : "Female"
+        let sexOfPet = pet.sex == "M" ? NSLocalizedString("Male", comment: "MALE_PET") : NSLocalizedString("Female", comment: "FEMALE_PET")
         
-        cell.name = pet.name
+        cell.name = "Name: " + pet.name
         cell.animal = sexOfPet + " " + pet.animal
-        cell.sex = pet.age
+        cell.age = "Age: " + pet.age
 
         return cell
     }

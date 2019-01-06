@@ -33,9 +33,9 @@ class PetsViewCell: UITableViewCell {
         }
     }
     
-    var sex: String? {
+    var age: String? {
         didSet {
-            self.petSex.text = sex
+            self.petSex.text = age
         }
     }
 
