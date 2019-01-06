@@ -49,7 +49,7 @@ class SheltersViewController: UITableViewController {
         let shelter = allSheltersArray[indexPath.row]
         
         cell.name = shelter.name
-        cell.city = shelter.city
+        cell.city = shelter.city + insertCitySpacer(shelter: shelter) + shelter.state + ", " + shelter.zip
 
         return cell
     }
@@ -77,6 +77,15 @@ class SheltersViewController: UITableViewController {
         let shelter = allSheltersArray[indexPath.row]
         selectedShelterId = shelter.id
         performSegue(withIdentifier: "showPets", sender: self)
+    }
+    
+    // MARK: - Private Helper Functions
+    
+    fileprivate func insertCitySpacer(shelter: Shelter) -> String {
+        if shelter.city.last == " " {
+            return ""
+        }
+        return " "
     }
 
     // MARK: - Networking Functions
@@ -106,6 +115,7 @@ class SheltersViewController: UITableViewController {
         if let shelters = json.dictionaryValue["petfinder"]?["shelters"]["shelter"] {
             
             for (_, shelter) in shelters {
+                print("shelter \(shelter)")
                 let currentShelter = Shelter(json: shelter)
                 self.allSheltersArray.append(currentShelter)
             }
