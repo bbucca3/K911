@@ -17,6 +17,7 @@ struct Shelter {
     let city: String
     let country: String
     let state: String
+    let zip: String
     let address: String
     
     init(json: JSON) {
@@ -27,6 +28,7 @@ struct Shelter {
         self.city = json["city"]["$t"].stringValue
         self.country = json["country"]["$t"].stringValue
         self.state = json["state"]["$t"].stringValue
+        self.zip = json["zip"]["$t"].stringValue
         self.address = json["address1"]["$t"].stringValue
     }
 }
