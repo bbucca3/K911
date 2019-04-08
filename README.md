@@ -10,6 +10,7 @@ iOS Application to access [Petfinder.com](https://www.petfinder.com/) Pets and S
 
 1. [Usage](#Usage)
 1. [Development](#Development)
+1. [Pods](#Pods)
 1. [Concept Screenshots](#concept-screenshots)
 
 ## Usage
@@ -29,6 +30,11 @@ In order to use search functionality:
 - Register for a Petfinder.com (free) API key [here](https://www.petfinder.com/developers/api-key).
 - Create a new Swift file called `Petfinder.swift` under the API folder.
 - Paste in your API key to `Petfinder.swift` (see `Example.swift` under API folder for format).
+
+## Pods
+
+- Alamofire
+- SwiftyJSON
 
 ## Concept Screenshots
 
