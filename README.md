@@ -1,6 +1,6 @@
 # K911
 
-> Petfinder.com Pets and Pet Shelter(s) Search
+iOS Application to access [Petfinder.com](https://www.petfinder.com/) Pets and Shelters Search
 
 ## Team
 
