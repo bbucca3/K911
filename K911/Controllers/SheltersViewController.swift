@@ -14,44 +14,28 @@ class SheltersViewController: UITableViewController {
     
     // MARK: - Properties
     
+    let dataSource = SheltersDataSource()
     let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
-    let API_KEY: String = Petfinder().token
-    var allSheltersArray = [Shelter]()
+    
     var selectedShelterId: String?
     var zipCode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dataSource.dataChanged = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
         if let fiveDigitZipCode = zipCode {
             if fiveDigitZipCode.count != 5 {
                 print("Did not enter 5 digit zip")
             } else {
-                findShelters(url: SHELTER_URL, zip: fiveDigitZipCode)
+                dataSource.fetch(SHELTER_URL, zipCode: fiveDigitZipCode)
             }
         }
-    }
-
-    // MARK: - TableView DataSource Methods
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allSheltersArray.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath) as! SheltersViewCell
-
-        let shelter = allSheltersArray[indexPath.row]
-        
-        cell.name = shelter.name
-        cell.city = shelter.city + insertCitySpacer(shelter: shelter) + shelter.state + ", " + shelter.zip
-
-        return cell
+        tableView.dataSource = dataSource
     }
     
     // MARK: - TableView Delegate Methods
@@ -74,54 +58,9 @@ class SheltersViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let shelter = allSheltersArray[indexPath.row]
+        let shelter = dataSource.allSheltersArray[indexPath.row]
         selectedShelterId = shelter.id
         performSegue(withIdentifier: "showPets", sender: self)
-    }
-    
-    // MARK: - Private Helper Functions
-    
-    fileprivate func insertCitySpacer(shelter: Shelter) -> String {
-        if shelter.city.last == " " {
-            return ""
-        }
-        return " "
-    }
-
-    // MARK: - Networking Functions
-    
-    fileprivate func findShelters(url: String, zip: String) {
-        
-        let params: [String : Any] = ["key" : API_KEY, "location" : zip, "format" : "json", "offset" : 0]
-        
-        Alamofire.request(url, method: .get, parameters: params).responseJSON {
-            response in
-            if response.result.isSuccess {
-                if let value = response.result.value {
-                    let sheltersJSON: JSON = JSON(value)
-                    self.updateSheltersData(json: sheltersJSON)
-                }
-            }
-            else {
-                print("findShelters Error \(String(describing: response.result.error))")
-            }
-        }
-    }
-    
-    // MARK: - JSON Parsing
-    
-    fileprivate func updateSheltersData(json: JSON) {
-        
-        if let shelters = json.dictionaryValue["petfinder"]?["shelters"]["shelter"] {
-            
-            for (_, shelter) in shelters {
-                print("shelter \(shelter)")
-                let currentShelter = Shelter(json: shelter)
-                self.allSheltersArray.append(currentShelter)
-            }
-        }
-        
-        tableView.reloadData()
     }
     
     // MARK: - Navigation
