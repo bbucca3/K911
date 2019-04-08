@@ -29,8 +29,8 @@ pod install
 
 In order to use search functionality:
 
-- Register for a Petfinder.com (free) API key [here](https://www.petfinder.com/developers/api-key).
-- Create a new Swift file called `Petfinder.swift` under the API folder.
+- Register for a Petfinder.com API key (for free) [here](https://www.petfinder.com/developers/api-key).
+- Create a new Swift file, under the API folder, called `Petfinder.swift`.
 - Paste in your API key to `Petfinder.swift` (see `Example.swift` under API folder for format).
 
 ## Concept Screenshots
