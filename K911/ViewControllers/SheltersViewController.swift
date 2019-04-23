@@ -14,14 +14,18 @@ class SheltersViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let dataSource = SheltersDataSource()
-    let SHELTER_URL: String = "http://api.petfinder.com/shelter.find"
+    var presenter: SheltersPresenterProtocol?
     
+    let dataSource = SheltersDataSource()
+    let SHELTER_URL = "http://api.petfinder.com/shelter.find"
+    let kShowPets = "showPets"
     var selectedShelterId: String?
     var zipCode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = SheltersPresenter(view: self)
         
         dataSource.dataChanged = { [weak self] in
             self?.tableView.reloadData()
@@ -60,14 +64,15 @@ class SheltersViewController: UITableViewController {
         
         let shelter = dataSource.allSheltersArray[indexPath.row]
         selectedShelterId = shelter.id
-        performSegue(withIdentifier: "showPets", sender: self)
+        
+        presenter?.handleShelterTapped()
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "showPets" {
+        if segue.identifier == kShowPets {
             let petsVC = segue.destination as! PetsViewController
             if let shelterId = selectedShelterId {
                 petsVC.shelterId = shelterId
@@ -75,4 +80,10 @@ class SheltersViewController: UITableViewController {
         }
     }
 
+}
+
+extension SheltersViewController: SheltersViewProtocol {
+    func showPets() {
+        performSegue(withIdentifier: kShowPets, sender: self)
+    }
 }

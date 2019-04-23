@@ -14,26 +14,41 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var zipCodeTextField: UITextField!
     
+    var presenter:SearchPresenterProtocol?
+    let kShowShelters = "showShelters"
+    
     // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = SearchPresenter(view: self)
     }
 
     @IBAction func searchButtonTapped(_ sender: Any) {
         print("entered \(zipCodeTextField.text ?? "")")
         
-        performSegue(withIdentifier: "showShelters", sender: self)
+        presenter?.handleSearchTapped()
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showShelters" {
+        if segue.identifier == kShowShelters {
             let sheltersVC = segue.destination as! SheltersViewController
             sheltersVC.zipCode = zipCodeTextField.text!
         }
     }
     
+}
+
+extension SearchViewController: SearchViewProtocol {
+    func getZip() -> String? {
+        return self.zipCodeTextField.text
+    }
+    
+    func showShelters() {
+        performSegue(withIdentifier: kShowShelters, sender: self)
+    }
 }
 
