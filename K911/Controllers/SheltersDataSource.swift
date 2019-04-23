@@ -32,12 +32,10 @@ class SheltersDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "shelter", for: indexPath) as! SheltersViewCell
-        
         let shelter = allSheltersArray[indexPath.row]
         
         cell.name = shelter.name
         cell.city = shelter.city + insertCitySpacer(shelter: shelter) + shelter.state + ", " + shelter.zip
-        
         return cell
     }
     
