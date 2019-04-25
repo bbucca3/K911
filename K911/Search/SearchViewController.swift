@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SearchViewProtocol: class {
+    func getZip() -> String?
+    func showShelters()
+}
+
 class SearchViewController: UIViewController {
 
     // MARK: - Properties
@@ -25,9 +30,7 @@ class SearchViewController: UIViewController {
         presenter = SearchPresenter(view: self)
     }
 
-    @IBAction func searchButtonTapped(_ sender: Any) {
-        print("entered \(zipCodeTextField.text ?? "")")
-        
+    @IBAction func searchButtonTapped(_ sender: Any) {        
         presenter?.handleSearchTapped()
     }
     
@@ -36,7 +39,7 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == kShowShelters {
             let sheltersVC = segue.destination as! SheltersViewController
-            sheltersVC.zipCode = zipCodeTextField.text!
+            sheltersVC.zipCode = getZip()!
         }
     }
     

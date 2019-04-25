@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol SearchPresenterProtocol: class {
+    func handleSearchTapped()
+}
+
 class SearchPresenter: SearchPresenterProtocol {
     
     private weak var view:SearchViewProtocol?
@@ -17,11 +21,8 @@ class SearchPresenter: SearchPresenterProtocol {
     }
     
     func handleSearchTapped() {
-        
-        if let zip = view?.getZip() {
-            if zip.count == 5 {
-                view?.showShelters()
-            }
+        if let zip = view?.getZip(), zip.count == 5 {
+            view?.showShelters()
         }
     }
 }

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1707EA6E226E989800F8C74A /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA6D226E989800F8C74A /* SearchContract.swift */; };
-		1707EA70226E99DE00F8C74A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA6F226E99DE00F8C74A /* SearchPresenter.swift */; };
 		1707EA73226EA05100F8C74A /* SheltersContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA72226EA05100F8C74A /* SheltersContract.swift */; };
 		1707EA75226EA0C700F8C74A /* SheltersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */; };
+		1707EA7A22713FB200F8C74A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7922713FB200F8C74A /* SearchPresenter.swift */; };
+		1707EA7C22713FBA00F8C74A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7B22713FBA00F8C74A /* SearchViewController.swift */; };
 		1787057821C48C0A00600D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787057721C48C0A00600D63 /* AppDelegate.swift */; };
-		1787057A21C48C0A00600D63 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787057921C48C0A00600D63 /* SearchViewController.swift */; };
 		1787057C21C48C0A00600D63 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787057B21C48C0A00600D63 /* SecondViewController.swift */; };
 		1787057F21C48C0A00600D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1787057D21C48C0A00600D63 /* Main.storyboard */; };
 		1787058121C48C0B00600D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1787058021C48C0B00600D63 /* Assets.xcassets */; };
@@ -32,13 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1707EA6D226E989800F8C74A /* SearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
-		1707EA6F226E99DE00F8C74A /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		1707EA72226EA05100F8C74A /* SheltersContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersContract.swift; sourceTree = "<group>"; };
 		1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersPresenter.swift; sourceTree = "<group>"; };
+		1707EA7922713FB200F8C74A /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		1707EA7B22713FBA00F8C74A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1787057421C48C0A00600D63 /* K911.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K911.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1787057721C48C0A00600D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1787057921C48C0A00600D63 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1787057B21C48C0A00600D63 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1787057E21C48C0A00600D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1787058021C48C0B00600D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,8 +73,8 @@
 		1707EA71226E9F0A00F8C74A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				1707EA6D226E989800F8C74A /* SearchContract.swift */,
-				1707EA6F226E99DE00F8C74A /* SearchPresenter.swift */,
+				1707EA7B22713FBA00F8C74A /* SearchViewController.swift */,
+				1707EA7922713FB200F8C74A /* SearchPresenter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -149,7 +147,6 @@
 		17E0693521DB0A7600D79B33 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1787057921C48C0A00600D63 /* SearchViewController.swift */,
 				17AB091921C56DF60076659B /* SheltersViewController.swift */,
 				17E0695F21DB378A00D79B33 /* PetsViewController.swift */,
 				17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */,
@@ -316,7 +313,9 @@
 			files = (
 				17E0696A21E04B6B00D79B33 /* PetsViewCell.swift in Sources */,
 				17AB091A21C56DF60076659B /* SheltersViewController.swift in Sources */,
+				1707EA7A22713FB200F8C74A /* SearchPresenter.swift in Sources */,
 				17E0692E21C6E84C00D79B33 /* Shelter.swift in Sources */,
+				1707EA7C22713FBA00F8C74A /* SearchViewController.swift in Sources */,
 				1787057C21C48C0A00600D63 /* SecondViewController.swift in Sources */,
 				17E069CC225AE95500D79B33 /* SheltersDataSource.swift in Sources */,
 				17E0696221DBECF000D79B33 /* Pet.swift in Sources */,
@@ -324,11 +323,8 @@
 				17AB092421C5E33E0076659B /* Example.swift in Sources */,
 				17E0696621DD97C300D79B33 /* SheltersViewCell.swift in Sources */,
 				1787057821C48C0A00600D63 /* AppDelegate.swift in Sources */,
-				1707EA6E226E989800F8C74A /* SearchContract.swift in Sources */,
 				17E0696021DB378A00D79B33 /* PetsViewController.swift in Sources */,
-				1787057A21C48C0A00600D63 /* SearchViewController.swift in Sources */,
 				17E0696C21E1659F00D79B33 /* PetDetailViewController.swift in Sources */,
-				1707EA70226E99DE00F8C74A /* SearchPresenter.swift in Sources */,
 				17E0696E21E2617000D79B33 /* Petfinder.swift in Sources */,
 				1707EA75226EA0C700F8C74A /* SheltersPresenter.swift in Sources */,
 				1707EA73226EA05100F8C74A /* SheltersContract.swift in Sources */,
