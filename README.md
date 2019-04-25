@@ -1,6 +1,6 @@
 # K911
 
-iOS Application to access [Petfinder.com](https://www.petfinder.com/) Pets and Shelters Search
+iOS Application to access [Petfinder.com](https://www.petfinder.com/)'s API
 
 ## Table of Contents
 
