@@ -10,6 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+protocol SheltersViewProtocol: class {
+    func showPets()
+}
+
 class SheltersViewController: UITableViewController {
     
     // MARK: - Properties

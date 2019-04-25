@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol SheltersPresenterProtocol: class {
+    func handleShelterTapped()
+}
+
 class SheltersPresenter: SheltersPresenterProtocol {
     
     private weak var view: SheltersViewProtocol?

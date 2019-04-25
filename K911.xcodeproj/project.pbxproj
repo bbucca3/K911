@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1707EA73226EA05100F8C74A /* SheltersContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA72226EA05100F8C74A /* SheltersContract.swift */; };
 		1707EA75226EA0C700F8C74A /* SheltersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */; };
 		1707EA7A22713FB200F8C74A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7922713FB200F8C74A /* SearchPresenter.swift */; };
 		1707EA7C22713FBA00F8C74A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7B22713FBA00F8C74A /* SearchViewController.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1707EA72226EA05100F8C74A /* SheltersContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersContract.swift; sourceTree = "<group>"; };
 		1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersPresenter.swift; sourceTree = "<group>"; };
 		1707EA7922713FB200F8C74A /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		1707EA7B22713FBA00F8C74A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -82,8 +80,8 @@
 		1707EA76226EA22100F8C74A /* Shelters */ = {
 			isa = PBXGroup;
 			children = (
+				17AB091921C56DF60076659B /* SheltersViewController.swift */,
 				17E069CB225AE95500D79B33 /* SheltersDataSource.swift */,
-				1707EA72226EA05100F8C74A /* SheltersContract.swift */,
 				1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */,
 			);
 			path = Shelters;
@@ -147,7 +145,6 @@
 		17E0693521DB0A7600D79B33 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				17AB091921C56DF60076659B /* SheltersViewController.swift */,
 				17E0695F21DB378A00D79B33 /* PetsViewController.swift */,
 				17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */,
 				1787057B21C48C0A00600D63 /* SecondViewController.swift */,
@@ -327,7 +324,6 @@
 				17E0696C21E1659F00D79B33 /* PetDetailViewController.swift in Sources */,
 				17E0696E21E2617000D79B33 /* Petfinder.swift in Sources */,
 				1707EA75226EA0C700F8C74A /* SheltersPresenter.swift in Sources */,
-				1707EA73226EA05100F8C74A /* SheltersContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

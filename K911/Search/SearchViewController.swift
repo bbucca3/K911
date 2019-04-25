@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchViewProtocol: class {
-    func getZip() -> String?
+    func getZipCode() -> String?
     func showShelters()
 }
 
@@ -39,14 +39,14 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == kShowShelters {
             let sheltersVC = segue.destination as! SheltersViewController
-            sheltersVC.zipCode = getZip()!
+            sheltersVC.zipCode = getZipCode()!
         }
     }
     
 }
 
 extension SearchViewController: SearchViewProtocol {
-    func getZip() -> String? {
+    func getZipCode() -> String? {
         return self.zipCodeTextField.text
     }
     

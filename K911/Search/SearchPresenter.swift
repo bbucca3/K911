@@ -21,7 +21,7 @@ class SearchPresenter: SearchPresenterProtocol {
     }
     
     func handleSearchTapped() {
-        if let zip = view?.getZip(), zip.count == 5 {
+        if let zip = view?.getZipCode(), zip.count == 5 {
             view?.showShelters()
         }
     }
