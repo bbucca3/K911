@@ -8,16 +8,16 @@
 
 import UIKit
 
-class PetsViewCell: UITableViewCell {
+class PetViewCell: UITableViewCell {
 
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petName: UILabel!
     @IBOutlet weak var petAnimal: UILabel!
     @IBOutlet weak var petSex: UILabel!
     
-    var petImg: UIImage? {
+    var img: UIImage? {
         didSet {
-            self.petImage.image = petImg
+            self.petImage.image = img
         }
     }
     
