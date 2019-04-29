@@ -41,7 +41,7 @@ class PetsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath) as! PetsViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pet", for: indexPath) as! PetViewCell
 
         let pet = allPetsArray[indexPath.row]
         
@@ -49,7 +49,7 @@ class PetsViewController: UITableViewController {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url)
                 DispatchQueue.main.async {
-                    cell.petImg = UIImage(data: data!)
+                    cell.img = UIImage(data: data!)
                 }
             }
 

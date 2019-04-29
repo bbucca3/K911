@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="pet" rowHeight="140" id="dsL-q8-rFT" customClass="PetsViewCell" customModule="K911" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="pet" rowHeight="140" id="dsL-q8-rFT" customClass="PetViewCell" customModule="K911" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dsL-q8-rFT" id="HJm-xW-Mmf">
@@ -219,9 +219,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="petAnimal" destination="6ib-yn-yks" id="fIo-eU-nKW"/>
-                                    <outlet property="petImage" destination="DqV-XY-eVE" id="CYe-Ue-w2H"/>
-                                    <outlet property="petName" destination="QXc-dA-35N" id="ZHs-ob-kC8"/>
+                                    <outlet property="petAnimal" destination="6ib-yn-yks" id="Pdx-hq-VDI"/>
+                                    <outlet property="petImage" destination="DqV-XY-eVE" id="nMr-b0-Mhv"/>
+                                    <outlet property="petName" destination="QXc-dA-35N" id="PMn-t7-uqJ"/>
                                     <outlet property="petSex" destination="zAj-fH-rvs" id="Wa9-bm-jpV"/>
                                 </connections>
                             </tableViewCell>

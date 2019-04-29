@@ -10,7 +10,7 @@ import UIKit
 
 protocol SearchViewProtocol: class {
     func getZipCode() -> String?
-    func showShelters()
+    func showSearchResults()
 }
 
 class SearchViewController: UIViewController {
@@ -50,7 +50,7 @@ extension SearchViewController: SearchViewProtocol {
         return self.zipCodeTextField.text
     }
     
-    func showShelters() {
+    func showSearchResults() {
         performSegue(withIdentifier: kShowShelters, sender: self)
     }
 }

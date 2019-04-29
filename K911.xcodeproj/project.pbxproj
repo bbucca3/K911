@@ -10,6 +10,7 @@
 		1707EA75226EA0C700F8C74A /* SheltersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */; };
 		1707EA7A22713FB200F8C74A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7922713FB200F8C74A /* SearchPresenter.swift */; };
 		1707EA7C22713FBA00F8C74A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA7B22713FBA00F8C74A /* SearchViewController.swift */; };
+		1707EA862276A93E00F8C74A /* K911Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EA852276A93E00F8C74A /* K911Tests.swift */; };
 		1787057821C48C0A00600D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787057721C48C0A00600D63 /* AppDelegate.swift */; };
 		1787057C21C48C0A00600D63 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787057B21C48C0A00600D63 /* SecondViewController.swift */; };
 		1787057F21C48C0A00600D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1787057D21C48C0A00600D63 /* Main.storyboard */; };
@@ -22,17 +23,30 @@
 		17E0696221DBECF000D79B33 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696121DBECF000D79B33 /* Pet.swift */; };
 		17E0696421DC259600D79B33 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696321DC259600D79B33 /* Photo.swift */; };
 		17E0696621DD97C300D79B33 /* SheltersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696521DD97C300D79B33 /* SheltersViewCell.swift */; };
-		17E0696A21E04B6B00D79B33 /* PetsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696921E04B6B00D79B33 /* PetsViewCell.swift */; };
+		17E0696A21E04B6B00D79B33 /* PetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696921E04B6B00D79B33 /* PetViewCell.swift */; };
 		17E0696C21E1659F00D79B33 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */; };
 		17E0696E21E2617000D79B33 /* Petfinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0696D21E2617000D79B33 /* Petfinder.swift */; };
 		17E069CC225AE95500D79B33 /* SheltersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E069CB225AE95500D79B33 /* SheltersDataSource.swift */; };
 		E2A18DF305BD532583911658 /* Pods_K911.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686BF46773088F49DFD0A8D /* Pods_K911.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1707EA882276A93E00F8C74A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1787056C21C48C0A00600D63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1787057321C48C0A00600D63;
+			remoteInfo = K911;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1707EA74226EA0C700F8C74A /* SheltersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersPresenter.swift; sourceTree = "<group>"; };
 		1707EA7922713FB200F8C74A /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		1707EA7B22713FBA00F8C74A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1707EA832276A93E00F8C74A /* K911Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = K911Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1707EA852276A93E00F8C74A /* K911Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K911Tests.swift; sourceTree = "<group>"; };
+		1707EA872276A93E00F8C74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1787057421C48C0A00600D63 /* K911.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K911.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1787057721C48C0A00600D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1787057B21C48C0A00600D63 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +61,7 @@
 		17E0696121DBECF000D79B33 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		17E0696321DC259600D79B33 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		17E0696521DD97C300D79B33 /* SheltersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersViewCell.swift; sourceTree = "<group>"; };
-		17E0696921E04B6B00D79B33 /* PetsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewCell.swift; sourceTree = "<group>"; };
+		17E0696921E04B6B00D79B33 /* PetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewCell.swift; sourceTree = "<group>"; };
 		17E0696B21E1659F00D79B33 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 		17E0696D21E2617000D79B33 /* Petfinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petfinder.swift; sourceTree = "<group>"; };
 		17E069CB225AE95500D79B33 /* SheltersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheltersDataSource.swift; sourceTree = "<group>"; };
@@ -57,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1707EA802276A93E00F8C74A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1787057121C48C0A00600D63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,10 +108,20 @@
 			path = Shelters;
 			sourceTree = "<group>";
 		};
+		1707EA842276A93E00F8C74A /* K911Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1707EA852276A93E00F8C74A /* K911Tests.swift */,
+				1707EA872276A93E00F8C74A /* Info.plist */,
+			);
+			path = K911Tests;
+			sourceTree = "<group>";
+		};
 		1787056B21C48C0A00600D63 = {
 			isa = PBXGroup;
 			children = (
 				1787057621C48C0A00600D63 /* K911 */,
+				1707EA842276A93E00F8C74A /* K911Tests */,
 				1787057521C48C0A00600D63 /* Products */,
 				D34F3DBFC987D3E2B2B6D3C4 /* Pods */,
 				4B8D29E8AC9963B905954CA7 /* Frameworks */,
@@ -101,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				1787057421C48C0A00600D63 /* K911.app */,
+				1707EA832276A93E00F8C74A /* K911Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +169,7 @@
 				17E0696121DBECF000D79B33 /* Pet.swift */,
 				17E0696321DC259600D79B33 /* Photo.swift */,
 				17E0696521DD97C300D79B33 /* SheltersViewCell.swift */,
-				17E0696921E04B6B00D79B33 /* PetsViewCell.swift */,
+				17E0696921E04B6B00D79B33 /* PetViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +221,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1707EA822276A93E00F8C74A /* K911Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1707EA8A2276A93E00F8C74A /* Build configuration list for PBXNativeTarget "K911Tests" */;
+			buildPhases = (
+				1707EA7F2276A93E00F8C74A /* Sources */,
+				1707EA802276A93E00F8C74A /* Frameworks */,
+				1707EA812276A93E00F8C74A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1707EA892276A93E00F8C74A /* PBXTargetDependency */,
+			);
+			name = K911Tests;
+			productName = K911Tests;
+			productReference = 1707EA832276A93E00F8C74A /* K911Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1787057321C48C0A00600D63 /* K911 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1787058821C48C0B00600D63 /* Build configuration list for PBXNativeTarget "K911" */;
@@ -218,6 +268,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Benjamin Bucca";
 				TargetAttributes = {
+					1707EA822276A93E00F8C74A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 1787057321C48C0A00600D63;
+					};
 					1787057321C48C0A00600D63 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -237,11 +291,19 @@
 			projectRoot = "";
 			targets = (
 				1787057321C48C0A00600D63 /* K911 */,
+				1707EA822276A93E00F8C74A /* K911Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1707EA812276A93E00F8C74A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1787057221C48C0A00600D63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,11 +366,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1707EA7F2276A93E00F8C74A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1707EA862276A93E00F8C74A /* K911Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1787057021C48C0A00600D63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E0696A21E04B6B00D79B33 /* PetsViewCell.swift in Sources */,
+				17E0696A21E04B6B00D79B33 /* PetViewCell.swift in Sources */,
 				17AB091A21C56DF60076659B /* SheltersViewController.swift in Sources */,
 				1707EA7A22713FB200F8C74A /* SearchPresenter.swift in Sources */,
 				17E0692E21C6E84C00D79B33 /* Shelter.swift in Sources */,
@@ -328,6 +398,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1707EA892276A93E00F8C74A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1787057321C48C0A00600D63 /* K911 */;
+			targetProxy = 1707EA882276A93E00F8C74A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1787057D21C48C0A00600D63 /* Main.storyboard */ = {
@@ -349,6 +427,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1707EA8B2276A93E00F8C74A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8JDE23S344;
+				INFOPLIST_FILE = K911Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Bucca.K911Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/K911.app/K911";
+			};
+			name = Debug;
+		};
+		1707EA8C2276A93E00F8C74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8JDE23S344;
+				INFOPLIST_FILE = K911Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Benjamin-Bucca.K911Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/K911.app/K911";
+			};
+			name = Release;
+		};
 		1787058621C48C0B00600D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +626,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1707EA8A2276A93E00F8C74A /* Build configuration list for PBXNativeTarget "K911Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1707EA8B2276A93E00F8C74A /* Debug */,
+				1707EA8C2276A93E00F8C74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1787056F21C48C0A00600D63 /* Build configuration list for PBXProject "K911" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
