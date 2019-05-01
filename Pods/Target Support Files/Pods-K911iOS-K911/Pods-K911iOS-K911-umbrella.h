@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_K911VersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_K911VersionString[];
+FOUNDATION_EXPORT double Pods_K911iOS_K911VersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_K911iOS_K911VersionString[];
 
